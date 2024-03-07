@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (max-width: 741px) {
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .left-side, .right-side {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .avatar {
+      width: 10px;
+      height: 10px;
+      
+    }
+}
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .flex-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: container; /* Default layout for larger screens */
+  }
+
+  .left-side {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #561C24;
+    padding-right: 5%;
+  }
+
+  .right-side {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFF2D8;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+  }
+  .avatar, .links li a, .contact-info div, .contact-info a {
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for hover effects */
+  }
+  .avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 15px;
+    padding: 0;
+  }
+  .links li a:hover {
+    color: #113946; /* Change to your desired hover color */
+  }
+  .links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #BCA37F;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #BCA37F;
+    font-size: 23px;
+  }
+
+  .contact-info {
+    display: flex; /* Added for flex display */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Space between phone and email */
+    border-top: 1px solid #808080;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .contact-info div, .contact-info a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #113946;
+    text-decoration: none;
+  }
+  .name.fade-in {
+    color: #113946; /* Change to your desired color for the name */
+    font-size: 46px; /* Bigger font size for name */
+  }
+  .profession.fade-in {
+    color: #113946; /* Change to your desired color for the profession */
+    font-size: 36px; /* Bigger font size for name */
+  }
+  .fas.fa-phone, .fas.fa-envelope {
+    color: #113946; /* Change to your desired color for the profession */
+  }
+  
+  
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="left-side fade-in" style="animation-delay: 0.5s;">
+    <img src="files/pic.jpg" alt="Avatar" class="avatar">
+  </div>
+  <div class="right-side">
+    <div class="main-content">
+      <h1 class="name fade-in" style="animation-delay: 1s;">Stephanos Hadjimylos</h1>
+      <h2 class="profession fade-in" style="animation-delay: 1.5s;">Software Developer</h2>
+      <ul class="links fade-in" style="animation-delay: 2s;">
+        <li><a href="https://github.com/stephanoshadjimylos" title="GitHub" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/stephanos-hadjimylos-995219125/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="files/Stephanos_Hadjimylos_Resume.pdf" title="Download CV" download target="_blank"><i class="fas fa-file-download"></i></a></li>
+      </ul>
+    </div>
+    <div class="contact-info fade-in" style="animation-delay: 2.5s;">
+      <div><i class="fas fa-phone"></i> +357 99251437</div>
+      <div><i class="fas fa-envelope"></i> <a href="mailto:stephanoshadjimylos@gmail.com">stephanoshadjimylos@gmail.com</a></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
